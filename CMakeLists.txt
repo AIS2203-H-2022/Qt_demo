@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.15)
 
 project(Qt_demo VERSION 0.1 LANGUAGES CXX)
 
@@ -38,17 +38,9 @@ set(PROJECT_SOURCES
         mainwindow.ui
 )
 
-if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(Qt_demo
-        MANUAL_FINALIZATION
-        ${PROJECT_SOURCES}
-    )
-
-else()
-        add_executable(Qt_demo
-            ${PROJECT_SOURCES}
-        )
-endif()
+add_executable(Qt_demo
+    ${PROJECT_SOURCES}
+)
 
 target_link_libraries(Qt_demo
         PRIVATE
