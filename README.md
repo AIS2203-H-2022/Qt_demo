@@ -1,4 +1,4 @@
-# Qt Demo
+# Qt_demo
 
 When building using CMake on the command line or using CLion (i.e. not using Qt Creator) two thing are needed:
 
